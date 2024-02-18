@@ -4,5 +4,5 @@ key = bytes.fromhex(key)
 
 key = base64.b64encode(key)
 
-print(key)
+print(key.decode())
 
