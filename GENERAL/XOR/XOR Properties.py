@@ -1,5 +1,5 @@
 from pwn import *
-from Crypto.Util.number import *
+from cryptography.utils import *
 
 
 

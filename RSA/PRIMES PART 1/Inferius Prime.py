@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from Crypto.Util.number import getPrime, inverse, bytes_to_long, long_to_bytes, GCD
+from cryptography.utils import *
 
 n = 742449129124467073921545687640895127535705902454369756401331
 e = 3
@@ -12,4 +12,4 @@ phi = (q-1)*(p-1)
 d = pow(e, -1, phi)
 
 flag = pow(ct, d, n)
-print(long_to_bytes(flag).decode())
+print(int_to_bytes(flag).decode())
