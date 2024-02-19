@@ -10,7 +10,6 @@ c = 2225028859741824295009483898405634152915347268913545739073295125564396328109
 n = gmpy2.mpz(N)
 gmpy2.get_context().precision=2048
 n = int(gmpy2.sqrt(n))
-
 totient = n*(n-1)
 private_key = pow(e, -1, totient)
 a = long_to_bytes(pow(c, private_key, N))
